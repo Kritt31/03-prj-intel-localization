@@ -140,7 +140,7 @@ section.scrollable-container img {
 
 .card:hover .card-text,
 .card:focus-within .card-text {
-  opacity: 1; /* Fully visible on hover or focus */
+  opacity: 1; /* Fully visible on hover or focus */ 
 }
 
 /* Scale up cards on hover or focus */
