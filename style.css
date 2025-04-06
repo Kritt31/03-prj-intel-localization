@@ -1,0 +1,150 @@
+/* ...existing code... */
+
+/* Example: Adjustments for RTL layout */
+body {
+  text-align: right;
+}
+
+img {
+  float: right;
+}
+
+/* Icon styling */
+h2 i {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+/* Adjust spacing for RTL layout */
+.container {
+  text-align: right;
+}
+
+/* Add more custom styles as needed */
+
+/* Center the form and adjust spacing */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Footer styling */
+footer {
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section gradient background */
+header {
+  background: linear-gradient(to bottom, #2e83c0, #08066c);
+  padding: 20px 0;
+}
+
+/* Display images in one row */
+section img {
+  display: inline-block;
+  width: auto;
+  height: 150px; /* Adjust height as needed */
+  margin: 5px;
+}
+
+/* Center the container and enable horizontal scrolling */
+section.scrollable-container {
+  display: flex;
+  overflow-x: auto;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+section.scrollable-container img {
+  flex: 0 0 auto;
+  width: auto;
+  height: 150px; /* Adjust height as needed */
+}
+
+/* Overlay text on images */
+.position-relative {
+  display: inline-block;
+  position: relative;
+}
+
+.position-absolute {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Place text on top of the image in cards */
+.card {
+  position: relative;
+  overflow: hidden; /* Ensure content stays within the card */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.card-title,
+.card-subtitle,
+.card-text {
+  margin: 5px 0;
+}
+
+/* Position card year and title above the card image */
+.card-title,
+.card-subtitle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1; /* Ensure it sits above the image */
+}
+
+.card-img-top {
+  margin-top: 50px; /* Add space for the title and subtitle */
+}
+
+/* Place only the paragraph text on top of the image in cards */
+.card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+.card:hover .card-text,
+.card:focus-within .card-text {
+  opacity: 1; /* Fully visible on hover or focus */
+}
+
+/* Scale up cards on hover or focus */
+.card:hover,
+.card:focus-within {
+  transform: scale(1.05); /* Slightly scale up the card */
+}
